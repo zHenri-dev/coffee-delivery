@@ -1,6 +1,7 @@
 import { FormEvent, useContext, useState } from 'react'
 import { Minus, Plus, ShoppingCartSimple } from 'phosphor-react'
 import { CartContext } from '../../../contexts/CartContext'
+import { toast } from 'react-toastify'
 
 interface CoffeeCardFormProps {
   name: string
@@ -42,6 +43,16 @@ export function CoffeeCardForm({ name, imageURL, price }: CoffeeCardFormProps) {
       imageURL,
       price,
       amount: cartAmount,
+    })
+
+    toast.success('Café adicionado ao seu carrinho!', {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
     })
   }
 

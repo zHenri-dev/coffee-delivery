@@ -12,6 +12,7 @@ import { useContext } from 'react'
 import { CartContext } from '../../contexts/CartContext'
 import { priceFormatter } from '../../utils/formatter'
 import { Link, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 import * as RadioGroup from '@radix-ui/react-radio-group'
 import * as zod from 'zod'
@@ -90,6 +91,16 @@ export function Checkout() {
     )
     reset()
     resetCart()
+
+    toast.success('Pedido realizado com sucesso!', {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    })
   }
 
   const inputDefaultStyle =

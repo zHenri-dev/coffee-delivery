@@ -2,6 +2,7 @@ import { FormEvent, useContext, useState } from 'react'
 import { Minus, Plus, Trash } from 'phosphor-react'
 import { priceFormatter } from '../../../utils/formatter'
 import { CartContext } from '../../../contexts/CartContext'
+import { toast } from 'react-toastify'
 
 interface CartItemProps {
   coffeeName: string
@@ -56,6 +57,16 @@ export function CartItem({
   function handleSubmit(event: FormEvent) {
     event.preventDefault()
     removeCartItem(coffeeName)
+
+    toast.error('Café removido do seu carrinho!', {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    })
   }
 
   return (
