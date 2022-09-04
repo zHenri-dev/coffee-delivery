@@ -15,7 +15,7 @@ export function Header() {
   const { cartItems } = useContext(CartContext)
 
   useEffect(() => {
-    fetch('http://ip-api.com/json/')
+    fetch('https://ipapi.co/json/')
       .then((response) => response.json())
       .then((data) => {
         setUserLocation({
