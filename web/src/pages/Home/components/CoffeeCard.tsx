@@ -41,8 +41,8 @@ export function CoffeeCard({
         </span>
         <span className="text-center text-gray-600 text-sm">{description}</span>
       </div>
-      <div className="mt-8 text-gray-700 flex gap-[1.375rem] items-center">
-        <span className="text-sm text-center flex-1">
+      <div className="mt-8 text-gray-700 flex gap-[1.375rem] items-center mb-5">
+        <span className="text-sm text-center">
           R${' '}
           <strong className="font-cursive font-extrabold text-2xl">
             {priceFormatter.format(price).replace('R$ ', '')}

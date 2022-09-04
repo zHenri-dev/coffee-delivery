@@ -22,7 +22,7 @@ export function CoffeeList() {
       <h1 className="font-cursive font-extrabold text-[32px] text-gray-800">
         Nossos cafés
       </h1>
-      <ul className="flex flex-wrap mt-[3.375rem] gap-x-8 gap-y-10">
+      <ul className="flex flex-wrap mt-[3.375rem] gap-x-8 gap-y-10 items-start">
         {coffees.map((coffee) => {
           return (
             <CoffeeCard
