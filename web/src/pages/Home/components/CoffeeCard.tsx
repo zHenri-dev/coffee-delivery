@@ -17,7 +17,7 @@ export function CoffeeCard({
   price,
 }: CoffeeCardProps) {
   return (
-    <div className="w-64 h-[19.375rem] bg-gray-200 rounded-md rounded-tr-[36px] rounded-bl-[36px] flex flex-col items-center px-5">
+    <div className="w-64 bg-gray-200 rounded-md rounded-tr-[36px] rounded-bl-[36px] flex flex-col items-center px-5">
       <img
         src={imageURL}
         alt=""
@@ -42,7 +42,7 @@ export function CoffeeCard({
         <span className="text-center text-gray-600 text-sm">{description}</span>
       </div>
       <div className="mt-8 text-gray-700 flex gap-[1.375rem] items-center">
-        <span className="text-sm text-center">
+        <span className="text-sm text-center flex-1">
           R${' '}
           <strong className="font-cursive font-extrabold text-2xl">
             {priceFormatter.format(price).replace('R$ ', '')}
