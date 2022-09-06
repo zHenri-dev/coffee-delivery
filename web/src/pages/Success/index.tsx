@@ -1,4 +1,5 @@
 import { CurrencyDollar, MapPin, Timer } from 'phosphor-react'
+import { useEffect } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import successManImg from '../../assets/success-man.svg'
 
@@ -27,9 +28,10 @@ export function Success() {
       break
   }
 
-  if (!deliveryAt || !secondAddress || !prediction || !paymentType) {
-    navigate('/')
-  }
+  useEffect(() => {
+    if (!deliveryAt || !secondAddress || !prediction || !paymentType)
+      navigate('/')
+  }, [deliveryAt, secondAddress, prediction, paymentType, navigate])
 
   return (
     <div className="mt-20 w-[70rem] m-auto flex gap-[6.25rem]">
