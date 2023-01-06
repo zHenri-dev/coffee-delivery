@@ -1,9 +1,9 @@
 ﻿# coffee-delivery
-Aplicação delivery de cafés realizada durante o Ignite da Rocketseat.
-<br>
-Layout no Figma: https://www.figma.com/file/5yT9ZzZmRQRS4yivGGB3pl/Coffee-Delivery/duplicate
+Aplicação de delivery de cafés realizada durante o Ignite da Rocketseat.
 <br>
 URL da aplicação em produção: https://zhenri-coffee-delivery.vercel.app/
+<br>
+Layout no Figma: https://www.figma.com/file/5yT9ZzZmRQRS4yivGGB3pl/Coffee-Delivery/duplicate
 ## Technologies
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 <br>
